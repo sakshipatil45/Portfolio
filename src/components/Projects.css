@@ -1,0 +1,473 @@
+.projects-section {
+  background-color: var(--bg-color);
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  border-color: rgba(131, 56, 236, 0.4);
+  transform: translateY(-5px);
+}
+
+.project-card.featured {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 550px;
+}
+
+.project-visual {
+  position: relative;
+  overflow: hidden;
+  background: #090a10;
+  min-height: 250px;
+}
+
+.project-card.featured .project-visual {
+  min-height: 100%;
+}
+
+.abstract-visual {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.project-card:hover .abstract-visual {
+  transform: scale(1.05);
+}
+
+/* Custom Visuals placeholders */
+.soc-visualization {
+  background: radial-gradient(circle at center, rgba(0, 82, 255, 0.2), transparent 60%),
+              linear-gradient(rgba(3, 4, 11, 0.8), rgba(3, 4, 11, 0.9));
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(0, 245, 212, 0.05) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(0, 245, 212, 0.05) 50px);
+}
+
+.pulse-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  position: absolute;
+  animation: pulse-glow 2s infinite;
+}
+
+.neara-flow { background: linear-gradient(135deg, rgba(131, 56, 236, 0.2), rgba(0, 82, 255, 0.1)); }
+.web-dashboard { background: linear-gradient(135deg, rgba(3, 4, 11, 0.5), rgba(0, 82, 255, 0.2)); }
+.job-portal { background: linear-gradient(135deg, rgba(0, 245, 212, 0.1), rgba(131, 56, 236, 0.1)); }
+.mobile-app { background: linear-gradient(135deg, rgba(0, 82, 255, 0.15), rgba(3, 4, 11, 0.8)); }
+.dashboard-analytics { background: linear-gradient(135deg, rgba(131, 56, 236, 0.15), rgba(0, 245, 212, 0.1)); }
+
+.project-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card:not(.featured) .project-info {
+  padding: 2rem;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-number {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--border-color);
+}
+
+.project-category {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.project-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-main);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.btn-icon {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .project-card.featured {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card.featured .project-visual {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-info {
+    padding: 2rem;
+  }
+  
+  .projects-wrapper {
+    gap: 3rem;
+  }
+}
+
+/* Abstract Artwork Styles */
+.artwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* NEARA ARTWORK */
+.neara-artwork {
+  background: radial-gradient(circle at center, rgba(0, 82, 255, 0.15) 0%, transparent 70%);
+}
+
+.map-base {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotateX(60deg) rotateZ(-45deg);
+  transition: transform 1s ease;
+}
+
+.project-card:hover .map-base {
+  transform: rotateX(60deg) rotateZ(-40deg) scale(1.05);
+}
+
+.radar-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: radar-pulse 3s infinite linear;
+}
+
+.c1 { width: 100px; height: 100px; animation-delay: 0s; }
+.c2 { width: 200px; height: 200px; animation-delay: 1s; }
+.c3 { width: 300px; height: 300px; animation-delay: 2s; }
+
+@keyframes radar-pulse {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.location-marker {
+  width: 30px;
+  height: 40px;
+  background: var(--gradient-primary);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 82, 255, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .location-marker {
+  transform: rotate(-45deg) scale(1.1) translateY(-5px) translateX(5px);
+}
+
+.marker-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.service-node {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(131, 56, 236, 0.8);
+  box-shadow: 0 0 15px rgba(131, 56, 236, 0.6);
+  transition: all 0.5s ease;
+}
+
+.n1 { top: 30%; left: 30%; }
+.n2 { top: 70%; left: 40%; background: rgba(0, 245, 212, 0.8); }
+.n3 { top: 40%; right: 25%; }
+
+.project-card:hover .n1 { transform: translate(-10px, -10px); }
+.project-card:hover .n2 { transform: translate(15px, 10px); }
+.project-card:hover .n3 { transform: translate(10px, -15px); }
+
+
+/* GYMKHANA ARTWORK */
+.gymkhana-artwork {
+  background: radial-gradient(circle at bottom right, rgba(131, 56, 236, 0.15) 0%, transparent 80%);
+}
+
+.field-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 20px,
+    rgba(255, 255, 255, 0.0) 20px,
+    rgba(255, 255, 255, 0.0) 40px
+  );
+  transform: perspective(500px) rotateX(45deg);
+  opacity: 0.5;
+}
+
+.field-lines {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: perspective(500px) rotateX(20deg);
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .field-lines {
+  transform: perspective(500px) rotateX(25deg) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.center-circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.half-line {
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+}
+
+.event-rings {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  top: 20%;
+  right: 20%;
+}
+
+.ring {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: transform 0.5s ease;
+}
+
+.r1 { border-color: rgba(0, 82, 255, 0.7); }
+.r2 { border-color: rgba(131, 56, 236, 0.7); margin-top: 15px; }
+.r3 { border-color: rgba(0, 245, 212, 0.7); }
+
+.project-card:hover .r1 { transform: translateY(-5px); }
+.project-card:hover .r2 { transform: translateY(5px); }
+.project-card:hover .r3 { transform: translateY(-5px); }
+
+.motion-streak {
+  position: absolute;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: 2px;
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+.s1 { width: 150px; top: 40%; left: 10%; transform: rotate(-15deg); }
+.s2 { width: 100px; bottom: 30%; right: 20%; transform: rotate(10deg); }
+
+
+/* CAREERSYNC ARTWORK */
+.careersync-artwork {
+  background: radial-gradient(circle at top left, rgba(0, 245, 212, 0.1) 0%, transparent 70%);
+}
+
+.grid-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 82, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 82, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.6;
+}
+
+.trend-graph {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  padding: 0 10%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.graph-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.graph-area {
+  fill: url(#graph-gradient);
+  fill: rgba(131, 56, 236, 0.15);
+  transition: fill 0.5s ease;
+}
+
+.project-card:hover .graph-area {
+  fill: rgba(131, 56, 236, 0.25);
+}
+
+.graph-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 8px rgba(0, 82, 255, 0.6));
+}
+
+.graph-point {
+  fill: var(--bg-color-card);
+  stroke: var(--accent);
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .graph-point {
+  transform: scale(1.5);
+  transform-origin: center;
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+.abstract-profile {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 30px rgba(131, 56, 236, 0.4);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.abstract-profile::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--secondary) 0%, transparent 100%);
+  border-radius: 40px 40px 0 0;
+  opacity: 0.5;
+}
+
+.project-card:hover .abstract-profile {
+  transform: translateY(-10px) scale(1.05);
+}

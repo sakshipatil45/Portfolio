@@ -1,0 +1,70 @@
+.learning-section {
+  background-color: var(--bg-color-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.learning-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.learning-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: var(--bg-color-card);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.learning-card:hover {
+  border-color: rgba(131, 56, 236, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(131, 56, 236, 0.08);
+}
+
+.learning-index {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(131, 56, 236, 0.4);
+  min-width: 2.5rem;
+  line-height: 1;
+}
+
+.learning-content {
+  flex: 1;
+}
+
+.learning-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.learning-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+}
