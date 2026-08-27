@@ -8,16 +8,16 @@ const Contact = () => {
         
         <div className="contact-content">
           <h2 className="contact-heading">
-            HAVE AN IDEA OR <br/>
-            OPPORTUNITY? <span className="text-gradient">LET'S TALK.</span>
+            HAVE AN IDEA, OPPORTUNITY, <br/>
+            OR JUST WANT TO <span className="text-gradient">TALK TECH?</span>
           </h2>
           
           <p className="contact-subtext">
-            Have an idea, opportunity, or just want to talk tech? I'm always open to interesting conversations.
+            I'm always open to interesting conversations, collaboration, or new opportunities. Feel free to reach out.
           </p>
           
           <div className="contact-actions">
-            <a href="mailto:sakshicpatil2006@gmail.com" className="btn btn-primary">Get In Touch &rarr;</a>
+            <a href="mailto:sakshicpatil2006@gmail.com" className="btn btn-primary">Let's Connect &rarr;</a>
           </div>
           
           <div className="contact-links">
@@ -36,12 +36,12 @@ const Contact = () => {
             
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" />
+              <input type="email" id="email" placeholder="you@example.com" />
             </div>
             
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows="4" placeholder="What's on your mind?"></textarea>
+              <textarea id="message" rows="4" placeholder="Tell me about your idea..."></textarea>
             </div>
             
             <button type="submit" className="btn btn-outline submit-btn">

@@ -97,45 +97,32 @@
   transform-origin: left;
 }
 
-/* Learning category styles */
-.learning-category .category-title {
+/* Learning category treatment */
+.skill-category.learning .category-title {
   border-left-color: var(--secondary);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+}
+
+.skill-category.learning .tech-card {
+  border-style: dashed;
+  border-color: rgba(131, 56, 236, 0.25);
+}
+
+.skill-category.learning .tech-card:hover {
+  border-style: solid;
+  border-color: transparent;
 }
 
 .learning-badge {
-  font-family: var(--font-sans);
+  display: inline-block;
   font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--secondary);
-  border: 1px dashed rgba(131, 56, 236, 0.5);
+  background: rgba(131, 56, 236, 0.1);
+  border: 1px solid rgba(131, 56, 236, 0.25);
   padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-  background: rgba(131, 56, 236, 0.08);
+  border-radius: 4px;
+  margin-left: 1rem;
+  vertical-align: middle;
 }
-
-.tech-card-learning {
-  border-style: dashed;
-  border-color: rgba(131, 56, 236, 0.25);
-  background: rgba(131, 56, 236, 0.04);
-}
-
-.tech-card-learning:hover {
-  border-style: solid;
-  border-color: transparent;
-  box-shadow: 0 15px 35px rgba(131, 56, 236, 0.15);
-}
-
-.tech-card-learning::after {
-  background: linear-gradient(135deg, var(--secondary), #0052FF);
-}
-
-.tech-card-learning::before {
-  background: linear-gradient(135deg, var(--secondary), #0052FF);
-}
-

@@ -18,7 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['HOME', 'ABOUT', 'SKILLS', 'WORK', 'LEARNING', 'EXPERIENCE', 'CONTACT'];
+  const navLinks = ['HOME', 'ABOUT', 'SKILLS', 'PROJECTS', 'LEARNING', 'EXPERIENCE', 'CONTACT'];
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -31,7 +31,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link}>
               <a 
-                href={`#${link.toLowerCase()}`} 
+                href={`#${link.toLowerCase() === 'projects' ? 'work' : link.toLowerCase()}`} 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link}

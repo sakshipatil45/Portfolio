@@ -1,15 +1,13 @@
 .learning-section {
-  background-color: var(--bg-color-light);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
 }
 
-.learning-subtitle {
-  font-size: 1rem;
+.learning-intro {
+  font-size: 1.1rem;
   color: var(--text-muted);
-  max-width: 500px;
-  margin-top: 0.5rem;
-  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
 }
 
 .learning-grid {
@@ -18,31 +16,29 @@
   gap: 1.5rem;
 }
 
-.learning-card {
+.learning-item {
   display: flex;
-  gap: 1.5rem;
   align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
   background: var(--bg-color-card);
   border: 1px solid var(--border-color);
-  border-left: 3px solid var(--secondary);
   border-radius: 8px;
-  padding: 1.5rem;
   transition: var(--transition);
 }
 
-.learning-card:hover {
-  border-color: rgba(131, 56, 236, 0.4);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(131, 56, 236, 0.08);
+.learning-item:hover {
+  border-color: rgba(131, 56, 236, 0.3);
+  transform: translateY(-2px);
 }
 
-.learning-index {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: rgba(131, 56, 236, 0.4);
-  min-width: 2.5rem;
-  line-height: 1;
+.learning-indicator {
+  width: 3px;
+  height: 100%;
+  min-height: 40px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .learning-content {
@@ -50,11 +46,11 @@
 }
 
 .learning-title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
   color: var(--text-main);
   margin-bottom: 0.5rem;
-  letter-spacing: 0.01em;
+  font-weight: 600;
 }
 
 .learning-desc {

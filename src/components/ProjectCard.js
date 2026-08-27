@@ -3,7 +3,24 @@ import React from 'react';
 const ProjectCard = ({ project, isFeatured }) => {
 
   const renderVisual = () => {
-    if (project.title === "NEARA") {
+    if (project.title === "FORENSIQ") {
+      return (
+        <div className="artwork forensiq-artwork">
+          <div className="grid-bg"></div>
+          <div className="shield-container">
+            <div className="shield-outer"></div>
+            <div className="shield-inner"></div>
+            <div className="scan-line"></div>
+          </div>
+          <div className="data-stream s1"></div>
+          <div className="data-stream s2"></div>
+          <div className="data-stream s3"></div>
+          <div className="threat-node t1"></div>
+          <div className="threat-node t2"></div>
+          <div className="threat-node t3"></div>
+        </div>
+      );
+    } else if (project.title === "NEARA") {
       return (
         <div className="artwork neara-artwork">
           <div className="map-base"></div>
@@ -18,7 +35,7 @@ const ProjectCard = ({ project, isFeatured }) => {
           <div className="service-node n3"></div>
         </div>
       );
-    } else if (project.title === "GYMKHANA MANAGEMENT PLATFORM") {
+    } else if (project.title === "GYMKHANA MANAGEMENT SYSTEM") {
       return (
         <div className="artwork gymkhana-artwork">
           <div className="field-bg"></div>
@@ -33,6 +50,25 @@ const ProjectCard = ({ project, isFeatured }) => {
           </div>
           <div className="motion-streak s1"></div>
           <div className="motion-streak s2"></div>
+        </div>
+      );
+    } else if (project.title === "TELECOM CHURN PREDICTION") {
+      return (
+        <div className="artwork churn-artwork">
+          <div className="grid-bg"></div>
+          <div className="trend-graph">
+            <svg viewBox="0 0 200 100" preserveAspectRatio="none" className="graph-svg">
+              <path d="M0,100 L30,80 L60,60 L90,70 L120,40 L150,50 L180,20 L200,30 L200,100 Z" className="graph-area" />
+              <path d="M0,100 L30,80 L60,60 L90,70 L120,40 L150,50 L180,20 L200,30" className="graph-line" />
+              <circle cx="60" cy="60" r="3" className="graph-point delay-1" />
+              <circle cx="120" cy="40" r="3" className="graph-point delay-2" />
+              <circle cx="180" cy="20" r="3" className="graph-point delay-3" />
+            </svg>
+          </div>
+          <div className="churn-bar b1"></div>
+          <div className="churn-bar b2"></div>
+          <div className="churn-bar b3"></div>
+          <div className="churn-bar b4"></div>
         </div>
       );
     } else if (project.title === "CAREERSYNC") {

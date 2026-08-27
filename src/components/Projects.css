@@ -77,6 +77,9 @@
 .job-portal { background: linear-gradient(135deg, rgba(0, 245, 212, 0.1), rgba(131, 56, 236, 0.1)); }
 .mobile-app { background: linear-gradient(135deg, rgba(0, 82, 255, 0.15), rgba(3, 4, 11, 0.8)); }
 .dashboard-analytics { background: linear-gradient(135deg, rgba(131, 56, 236, 0.15), rgba(0, 245, 212, 0.1)); }
+.forensiq-viz { background: linear-gradient(135deg, rgba(0, 82, 255, 0.2), rgba(131, 56, 236, 0.15)); }
+
+/* ... existing project-info, etc ... */
 
 .project-info {
   padding: 3rem;
@@ -471,3 +474,107 @@
 .project-card:hover .abstract-profile {
   transform: translateY(-10px) scale(1.05);
 }
+
+/* FORENSIQ ARTWORK */
+.forensiq-artwork {
+  background: radial-gradient(circle at center, rgba(0, 82, 255, 0.2) 0%, transparent 60%);
+}
+
+.shield-container {
+  position: relative;
+  width: 120px;
+  height: 140px;
+}
+
+.shield-outer {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%);
+  background: linear-gradient(180deg, rgba(0, 82, 255, 0.3) 0%, rgba(131, 56, 236, 0.2) 100%);
+  border: 1px solid rgba(0, 82, 255, 0.4);
+}
+
+.shield-inner {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%);
+  background: rgba(0, 82, 255, 0.1);
+  border: 1px solid rgba(0, 82, 255, 0.2);
+}
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  top: 50%;
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 20%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 80%; opacity: 0; }
+}
+
+.data-stream {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(0, 245, 212, 0.6), transparent);
+  border-radius: 1px;
+  animation: stream-flow 3s linear infinite;
+}
+
+.data-stream.s1 { height: 60px; top: 10%; left: 15%; animation-delay: 0s; }
+.data-stream.s2 { height: 80px; top: 20%; right: 20%; animation-delay: 1s; }
+.data-stream.s3 { height: 50px; bottom: 15%; left: 30%; animation-delay: 2s; }
+
+@keyframes stream-flow {
+  0% { opacity: 0; transform: translateY(-20px); }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.threat-node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px currentColor;
+  transition: all 0.5s ease;
+}
+
+.t1 { top: 25%; left: 20%; background: rgba(0, 82, 255, 0.8); color: rgba(0, 82, 255, 0.8); }
+.t2 { top: 60%; right: 15%; background: rgba(131, 56, 236, 0.8); color: rgba(131, 56, 236, 0.8); }
+.t3 { bottom: 20%; left: 40%; background: rgba(0, 245, 212, 0.8); color: rgba(0, 245, 212, 0.8); }
+
+.project-card:hover .t1 { transform: translate(-5px, -5px); }
+.project-card:hover .t2 { transform: translate(5px, 5px); }
+.project-card:hover .t3 { transform: translate(-5px, 5px); }
+
+
+/* TELECOM CHURN ARTWORK */
+.churn-artwork {
+  background: radial-gradient(circle at bottom center, rgba(0, 82, 255, 0.15) 0%, transparent 70%);
+}
+
+.churn-bar {
+  position: absolute;
+  bottom: 20%;
+  width: 20px;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.5s ease;
+}
+
+.b1 { left: 25%; height: 40%; background: linear-gradient(180deg, var(--primary) 0%, rgba(0, 82, 255, 0.3) 100%); }
+.b2 { left: 40%; height: 65%; background: linear-gradient(180deg, var(--secondary) 0%, rgba(131, 56, 236, 0.3) 100%); }
+.b3 { left: 55%; height: 35%; background: linear-gradient(180deg, var(--accent) 0%, rgba(0, 245, 212, 0.3) 100%); }
+.b4 { left: 70%; height: 55%; background: linear-gradient(180deg, var(--primary) 0%, rgba(0, 82, 255, 0.3) 100%); }
+
+.project-card:hover .b1 { height: 45%; }
+.project-card:hover .b2 { height: 70%; }
+.project-card:hover .b3 { height: 40%; }
+.project-card:hover .b4 { height: 60%; }

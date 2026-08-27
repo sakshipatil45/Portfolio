@@ -38,44 +38,56 @@
 .hero-actions {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
-.hero-socials {
+.hero-social-pills {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.85rem;
   align-items: center;
 }
 
-.hero-socials a {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+.social-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
   color: var(--text-muted);
-  text-transform: uppercase;
-  position: relative;
-}
-
-.hero-socials a:hover {
-  color: var(--accent);
-}
-
-.hero-socials a::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -15px;
-  width: 5px;
-  height: 5px;
-  background: var(--accent);
-  border-radius: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   transition: var(--transition);
 }
 
-.hero-socials a:hover::before {
+.social-pill:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.social-pill .social-icon {
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.social-pill:hover .social-icon {
   opacity: 1;
+  color: var(--accent);
+}
+
+.social-pill .arrow-icon {
+  opacity: 0.4;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-pill:hover .arrow-icon {
+  opacity: 0.9;
+  transform: translate(2px, -2px);
 }
 
 /* Developer Visual Graphic */
@@ -237,12 +249,8 @@
     justify-content: center;
   }
 
-  .hero-socials {
+  .hero-social-pills {
     justify-content: center;
-  }
-
-  .hero-socials a::before {
-    display: none;
   }
 
   .hero-visual {

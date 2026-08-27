@@ -5,17 +5,17 @@ const servicesData = [
   {
     num: "01",
     title: "FULL STACK DEVELOPMENT",
-    desc: "Building complete web applications — from the frontend UI down to APIs, databases, and authentication. I work across React, Node.js, PHP, and PostgreSQL."
+    desc: "Building complete web applications — from React frontends to Python/Node backends, databases, authentication, and deployment."
   },
   {
     num: "02",
     title: "AI APPLICATION DEVELOPMENT",
-    desc: "Exploring how to build practical applications using LLMs, RAG, and AI agents. Currently learning to integrate intelligent workflows into real software."
+    desc: "Currently learning to build AI-powered applications using LLMs, RAG pipelines, and agent frameworks like LangGraph and LangChain."
   },
   {
     num: "03",
-    title: "BACKEND & APIs",
-    desc: "Designing and building REST APIs, server-side logic, and database integrations. Working with Python, Node.js, FastAPI, and PostgreSQL."
+    title: "BACKEND & API ENGINEERING",
+    desc: "Developing REST APIs, database integrations, and server-side logic with Python (FastAPI), Node.js, and PostgreSQL."
   }
 ];
 
@@ -25,7 +25,7 @@ const Services = () => {
       <div className="container">
         
         <div className="section-header">
-          <span className="eyebrow">WHAT I DO</span>
+          <span className="eyebrow">WHAT I BUILD</span>
           <h2 className="section-title">MY FOCUS AREAS</h2>
         </div>
 

@@ -15,10 +15,9 @@ export const skills = [
     category: "BACKEND",
     technologies: [
       { name: "Python" },
-      { name: "Node.js" },
-      { name: "ExpressJS" },
+      { name: "FastAPI" },
       { name: "REST APIs" },
-      { name: "PHP" }
+      { name: "Node.js" }
     ]
   },
   {
@@ -26,7 +25,6 @@ export const skills = [
     technologies: [
       { name: "PostgreSQL" },
       { name: "MySQL" },
-      { name: "MongoDB" },
       { name: "Supabase" }
     ]
   },
@@ -49,6 +47,7 @@ export const skills = [
       { name: "GitHub" },
       { name: "Docker" },
       { name: "Linux" },
+      { name: "VS Code" },
       { name: "Vercel" }
     ]
   }
