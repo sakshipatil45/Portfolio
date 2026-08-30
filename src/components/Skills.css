@@ -84,6 +84,26 @@
   opacity: 0.5;
 }
 
+.tech-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.tech-card:hover .tech-icon {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
 .tech-name {
   font-size: 1.25rem;
   color: var(--text-muted);

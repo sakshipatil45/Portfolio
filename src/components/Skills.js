@@ -24,6 +24,7 @@ const Skills = () => {
                 {category.technologies.map((tech, i) => (
                   <div key={i} className="tech-card">
                     <div className="tech-card-inner">
+                      {tech.icon && <span className="tech-icon">{tech.icon}</span>}
                       <h4 className="tech-name">{tech.name}</h4>
                     </div>
                   </div>
