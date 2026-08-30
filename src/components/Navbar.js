@@ -39,6 +39,11 @@ const Navbar = () => {
             </li>
           ))}
           <li className="mobile-only">
+            <a href="/Sakshi%20Patil%20Resume.pdf" download="Sakshi_Patil_Resume.pdf" className="nav-resume-btn" onClick={() => setMobileMenuOpen(false)}>
+              RESUME
+            </a>
+          </li>
+          <li className="mobile-only" style={{ marginTop: '1rem' }}>
             <a href="#contact" className="nav-cta" onClick={() => setMobileMenuOpen(false)}>
               Let's Talk &rarr;
             </a>
@@ -46,6 +51,9 @@ const Navbar = () => {
         </ul>
 
         <div className="nav-right">
+          <a href="/Sakshi%20Patil%20Resume.pdf" download="Sakshi_Patil_Resume.pdf" className="nav-resume-btn desktop-only">
+            RESUME
+          </a>
           <a href="#contact" className="nav-cta desktop-only">
             Let's Talk &rarr;
           </a>
