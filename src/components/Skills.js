@@ -1,5 +1,5 @@
 import React from 'react';
-import { skills } from '../data/skills';
+import { skillCategories } from '../data/skills';
 import './Skills.css';
 
 const Skills = () => {
@@ -7,26 +7,38 @@ const Skills = () => {
     <section id="skills" className="section skills-section">
       <div className="container">
         
-        <div className="section-header text-center">
-          <span className="eyebrow">SKILLS</span>
-          <h2 className="section-title">TECHNOLOGIES I WORK WITH</h2>
+        <div className="section-header">
+          <span className="eyebrow">
+            <span className="eyebrow-dot"></span>
+            TECHNICAL COMPETENCIES
+          </span>
+          <h2 className="section-title">Skills & Technologies</h2>
+          <p className="section-subtitle">
+            Categorized tools and technologies verified through project implementations, coursework, and ongoing applied exploration.
+          </p>
         </div>
 
-        <div className="skills-container">
-          {skills.map((category, index) => (
-            <div key={index} className={`skill-category ${category.isLearning ? 'learning' : ''}`}>
-              <h3 className="category-title">
-                {category.category}
-                {category.isLearning && <span className="learning-badge">Exploring</span>}
-              </h3>
+        <div className="skills-grid">
+          {skillCategories.map((group, index) => (
+            <div 
+              key={index} 
+              className={`skill-category-card ${group.isLearning ? 'is-learning-group' : ''}`}
+            >
+              <div className="category-header">
+                <div className="title-row">
+                  <h3 className="category-title">{group.category}</h3>
+                  {group.isLearning && (
+                    <span className="learning-badge">Active Exploration</span>
+                  )}
+                </div>
+                <p className="category-desc">{group.description}</p>
+              </div>
               
-              <div className="tech-grid">
-                {category.technologies.map((tech, i) => (
-                  <div key={i} className="tech-card">
-                    <div className="tech-card-inner">
-                      {tech.icon && <span className="tech-icon">{tech.icon}</span>}
-                      <h4 className="tech-name">{tech.name}</h4>
-                    </div>
+              <div className="tech-chips-list">
+                {group.technologies.map((tech, i) => (
+                  <div key={i} className="tech-chip">
+                    {tech.icon && <span className="tech-chip-icon">{tech.icon}</span>}
+                    <span className="tech-chip-name">{tech.name}</span>
                   </div>
                 ))}
               </div>

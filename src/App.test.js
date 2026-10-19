@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Sakshi Patil hero and projects showcase', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const heroHeading = screen.getByRole('heading', { name: /sakshi patil/i });
+  expect(heroHeading).toBeInTheDocument();
+  
+  const forensiqElements = screen.getAllByText(/forensiq/i);
+  expect(forensiqElements.length).toBeGreaterThan(0);
 });

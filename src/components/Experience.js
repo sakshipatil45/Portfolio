@@ -1,5 +1,6 @@
 import React from 'react';
-import { experience, education } from '../data/experience';
+import { experience, education, achievements } from '../data/experience';
+import { FiBriefcase, FiBookOpen, FiAward, FiCalendar, FiMapPin } from 'react-icons/fi';
 import './Experience.css';
 
 const Experience = () => {
@@ -7,55 +8,101 @@ const Experience = () => {
     <section id="experience" className="section experience-section">
       <div className="container">
         
-        <div className="experience-grid">
+        <div className="section-header">
+          <span className="eyebrow">
+            <span className="eyebrow-dot"></span>
+            EXPERIENCE & ACADEMIC BACKGROUND
+          </span>
+          <h2 className="section-title">Experience & Education</h2>
+          <p className="section-subtitle">
+            A chronological timeline of my internships, academic qualifications, and technical hackathon accomplishments.
+          </p>
+        </div>
+
+        <div className="experience-layout">
           
-          {/* Experience Timeline */}
-          <div className="timeline-column">
-            <div className="section-header">
-              <span className="eyebrow">EXPERIENCE</span>
-              <h2 className="section-title">WORK HISTORY</h2>
+          {/* Work History Column */}
+          <div className="timeline-block">
+            <div className="block-header">
+              <div className="block-icon">
+                <FiBriefcase />
+              </div>
+              <h3 className="block-title">Internship Experience</h3>
             </div>
             
-            <div className="timeline">
+            <div className="timeline-list">
               {experience.map((item) => (
-                <div key={item.id} className="timeline-item">
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <span className="timeline-period">{item.period}</span>
-                    <h3 className="timeline-role">{item.role}</h3>
-                    <h4 className="timeline-company">{item.company}</h4>
-                    <p className="timeline-desc">{item.description}</p>
+                <div key={item.id} className="timeline-card">
+                  <div className="card-top-row">
+                    <span className="timeline-badge">
+                      <FiCalendar className="badge-icon" />
+                      {item.period}
+                    </span>
                   </div>
+                  <h4 className="timeline-role">{item.role}</h4>
+                  <div className="timeline-company">
+                    <FiMapPin className="company-icon" />
+                    <span>{item.company}</span>
+                  </div>
+                  <p className="timeline-desc">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Education Timeline */}
-          <div className="timeline-column">
-            <div className="section-header">
-              <span className="eyebrow">EDUCATION</span>
-              <h2 className="section-title">ACADEMICS</h2>
+          {/* Education Column */}
+          <div className="timeline-block">
+            <div className="block-header">
+              <div className="block-icon">
+                <FiBookOpen />
+              </div>
+              <h3 className="block-title">Education</h3>
             </div>
             
-            <div className="timeline">
+            <div className="timeline-list">
               {education.map((item) => (
-                <div key={item.id} className="timeline-item">
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content">
-                    <span className="timeline-period">{item.year}</span>
-                    <h3 className="timeline-role">{item.degree}</h3>
-                    <h4 className="timeline-company">{item.institution}</h4>
-                    <p className="timeline-desc">{item.cgpa}</p>
+                <div key={item.id} className="timeline-card">
+                  <div className="card-top-row">
+                    <span className="timeline-badge academic">
+                      <FiCalendar className="badge-icon" />
+                      {item.year}
+                    </span>
+                    <span className="cgpa-pill">{item.cgpa}</span>
+                  </div>
+                  <h4 className="timeline-role">{item.degree}</h4>
+                  <div className="timeline-company">
+                    <FiMapPin className="company-icon" />
+                    <span>{item.institution}</span>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Achievements Subsection */}
+            <div className="achievements-section">
+              <div className="block-header small">
+                <div className="block-icon small">
+                  <FiAward />
+                </div>
+                <h4 className="block-title small">Competitions & Hackathons</h4>
+              </div>
+
+              <div className="achievements-list">
+                {achievements.map((item) => (
+                  <div key={item.id} className="achievement-pill">
+                    <span className="achievement-bullet">★</span>
+                    <div>
+                      <strong className="achievement-name">{item.title}:</strong>{' '}
+                      <span className="achievement-desc">{item.description}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
         </div>
-
-
 
       </div>
     </section>
