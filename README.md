@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# Sakshi Patil — Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Premium, recruiter-focused personal portfolio website engineered with React, pure CSS, and modern editorial dark aesthetics.
 
-## Available Scripts
+[![React](https://img.shields.io/badge/React-18-blue.svg?logo=react&logoColor=white)](https://reactjs.org/)
+[![Status](https://img.shields.io/badge/Status-Live%20Ready-success.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This repository houses the personal portfolio of **Sakshi Patil**, a Computer Science Engineering student (Class of 2027) focused on **Software Engineering (SDE)**, **Full-Stack Application Development**, and **Distributed/Cloud Systems**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The portfolio has been redesigned with an editorial, dark-mode design system (#080B12 background, #5B8CFF accent) tailored for technical recruiters and hiring managers. It showcases real engineering projects, technical depth, architectural pillars, and direct contact avenues without artificial metrics or placeholder links.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Key Features & Highlights
 
-### `npm run build`
+- **Hero & Identity:** Crisp value proposition, active status indicator, quick links to GitHub/LinkedIn/Email, and verified resume download.
+- **Featured Projects Showcase:**
+  - **Forensiq (Featured):** Deepfake voice & audio forensic analysis system built with Python, PyTorch, Librosa, and FastAPI.
+  - **Neara:** Location-aware discovery platform powered by React, Node.js, Express, and Leaflet.
+  - **Gymkhana Management System:** Campus athletics and facilities orchestration hub using PHP, MySQL, and Bootstrap.
+  - **Dorkly:** OSINT reconnaissance and query automation CLI tool in Python.
+  - **ERP Deployment System:** Automated multi-environment ERP provisioning engine with Bash, Docker, and Linux.
+- **Engineering Pillars (About):** Systems & full-stack focus, practical architecture principles, and continuous curiosity.
+- **Experience & Education:** Chronological roadmap covering academic milestones, coursework, leadership, and accomplishments.
+- **Categorized Technical Arsenal (Skills):** Languages, Frontend, Backend & APIs, Databases, DevOps & Cloud, Core CS Fundamentals.
+- **Recruiter-Friendly Contact Hub:** One-click copy for email, direct `mailto:` link, and verified profile references (no non-functional contact forms).
+- **Accessibility & Performance:** Semantic HTML5, WCAG-compliant contrast ratios, smooth scroll, zero external UI framework bloat, and `prefers-reduced-motion` support.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Core Framework:** [React 18](https://reactjs.org/) (Create React App architecture)
+- **Styling:** Custom Vanilla CSS Design System with CSS Custom Properties (Variables), Flexbox, and CSS Grid
+- **Typography:** [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (Display/Headings), [Inter](https://fonts.google.com/specimen/Inter) (Body & UI), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Code & Metrics)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/) (`react-icons/fi`, `react-icons/si`, `react-icons/tb`)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+portfolio/
+├── public/
+│   ├── index.html              # Entry HTML with custom typography and SEO metadata
+│   ├── photo.jpeg              # Profile portrait asset
+│   ├── Sakshi Patil Resume.pdf # Downloadable resume
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js / .css    # Sticky glassmorphism header & mobile navigation
+│   │   ├── Hero.js / .css      # Primary landing section & status badges
+│   │   ├── Projects.js / .css  # Featured and supporting project showcase
+│   │   ├── ProjectCard.js      # Interactive card with CSS-based technical preview canvases
+│   │   ├── About.js / .css     # Narrative and engineering pillar cards
+│   │   ├── Experience.js / .css# Education, leadership, and milestones timeline
+│   │   ├── Skills.js / .css    # Categorized skill chips with tech icons
+│   │   ├── Contact.js / .css   # Direct communication hub with clipboard utility
+│   │   └── Footer.js / .css    # Editorial footer & back-to-top interaction
+│   ├── data/
+│   │   ├── projects.js         # Verified project catalog with GitHub repositories
+│   │   ├── experience.js       # Timeline data, education, and achievements
+│   │   └── skills.js           # Tech stack categories and items
+│   ├── App.js / .css           # Main application composition
+│   ├── index.js                # React DOM render entry
+│   └── index.css               # Global theme tokens, typography, and base styles
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💻 Local Development Setup
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ensure you have [Node.js](https://nodejs.org/) (v16.x or newer recommended) and `npm` installed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sakshipatil45/Portfolio.git
+   cd Portfolio
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+3. **Start the local development server:**
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the portfolio in your browser. The page reloads automatically on edits.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Run unit tests:**
+   ```bash
+   npm test
+   ```
 
-### Making a Progressive Web App
+5. **Generate a production build:**
+   ```bash
+   npm run build
+   ```
+   Bundles and minifies the app into the `build/` directory for production deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🚢 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The project is configured for seamless deployment on **Vercel** or any static hosting platform (e.g., Netlify, GitHub Pages):
 
-### Deployment
+1. Link your GitHub repository to Vercel.
+2. Set Framework Preset: **Create React App**.
+3. Build Command: `npm run build`
+4. Output Directory: `build`
+5. Deploy!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📬 Contact & Connect
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Name:** Sakshi Patil
+- **Email:** [sakshipatil112004@gmail.com](mailto:sakshipatil112004@gmail.com)
+- **LinkedIn:** [linkedin.com/in/sakshi-patil-1104sp](https://www.linkedin.com/in/sakshi-patil-1104sp)
+- **GitHub:** [github.com/sakshipatil45](https://github.com/sakshipatil45)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
